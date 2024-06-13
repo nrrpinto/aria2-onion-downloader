@@ -1,0 +1,33 @@
+## Tor configuration file
+
+## Use the SOCKS5 proxy on localhost port 9050
+SocksPort 9050
+
+## ControlPort for communicating with Tor
+ControlPort 9051
+
+## Data directory where Tor stores its data
+DataDirectory /conf/tor
+
+## Log messages to file
+Log notice file /conf/tor/notices.log
+
+## Do not run as a relay
+ORPort 0
+
+## Disable directory service (do not download the directory information)
+DownloadExtraInfo 0
+
+## Paths to hidden service directories
+# HiddenServiceDir /var/lib/tor/hidden_service/
+# HiddenServicePort 80 127.0.0.1:80
+
+## User Tor will run as
+#User tor
+
+## Address to bind to for listening for connections
+## By default, Tor will bind to 127.0.0.1. You can change this with the following:
+# Address 192.168.0.1
+
+## Exit policy (default: reject all)
+ExitPolicy reject *:*
