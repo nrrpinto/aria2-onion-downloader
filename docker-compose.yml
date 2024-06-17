@@ -1,11 +1,9 @@
-version: "3.3"
-
 services:
   downloader:
     build: downloader
     environment:
       - RPCPORT=6800
-      - RPCSECRET=TEST123
+      - RPCSECRET=F4D0S3CR3T
       - TORSERVNUM=50
     volumes:
       - ./downloader/conf:/conf
